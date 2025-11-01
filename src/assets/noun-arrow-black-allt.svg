@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 32 40" version="1.1" x="0px" y="0px">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-6.000000, -8.000000)" fill="#fc202099">
+            <g 
+                transform="translate(23.000000, 23.000000) rotate(-135.000000) translate(-23.000000, -23.000000) ">
+                <g transform="translate(2.000000, 2.000000)" >
+                    <rect x="19" y="0" width="4" height="40" />
+                </g>
+                <g transform="translate(23.000000, 23.707107) rotate(45.000000) translate(-23.000000, -23.707107) translate(7.500000, 8.207107)"
+                  >
+                    <rect x="6.03961325e-14" y="26" width="30" height="4" />
+                    <rect x="26" y="6.39488462e-14" width="4" height="30" />
+                </g>
+            </g>
+        </g>
+    </g><text x="0" y="47" fill="#ffffff" font-size="5px" font-weight="bold"
+        font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Liau Jian Jie</text><text
+        x="0" y="52" fill="#ffffff" font-size="5px" font-weight="bold"
+        font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
+</svg>
