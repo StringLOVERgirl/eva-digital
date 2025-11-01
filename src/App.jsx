@@ -35,6 +35,7 @@ class Cont extends React.Component{
       </nav>
       <div className="behance">
         <a target='_blank' href="https://www.behance.net/b40cfe62" className={`link ${this.state.iscontact && 'showcontact'}`}>me on Behance</a>
+        <a className={`email ${this.state.iscontact && 'showcontact'}`} href='mailto:megsoft007@gmail.com'>megsoft007@gmail.com</a>
       </div>
       <div className={`aboutcont ${this.state.isabout && 'showabout'}`}
               //  onMouseLeave={this.state.isabout && this.about}
