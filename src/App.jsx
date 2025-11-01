@@ -5,17 +5,21 @@ import './App.css'
 class Cont extends React.Component{
   constructor(){
     super()
-    this.state = {isabout: false}
+    this.state = {isabout: false, iscontact: false}
   }
 
-  about = () => {
-    this.setState(prev=>({isabout: !prev.isabout}))
+  about = (target) => {
+    if (target != 'link'){
+      this.setState(prev=>({iscontact: false ,isabout: !prev.isabout}))
+    } else {
+      this.setState(prev=>({isabout: false ,iscontact: !prev.iscontact}))
+    }
   }
 
   render=()=><div className='cont'>
     <header>
       <div className="namecont">
-        <a className="name" href='https://www.behance.net/b40cfe62' target='_blank'>M.</a>
+        <div className="name">M.</div>
       </div>
       <nav>
         <ul>
@@ -24,11 +28,14 @@ class Cont extends React.Component{
                    about me
                 </div>
              </li>
-             <li>
-                <div className="licont" aria-label='contacts'>contacts</div>
+             <li onClick={()=>this.about('link')}>
+                <div className="licont" aria-label='contacts'>contact</div>
              </li >
         </ul>
       </nav>
+      <div className="behance">
+        <a target='_blank' href="https://www.behance.net/b40cfe62" className={`link ${this.state.iscontact && 'showcontact'}`}>me on Behance</a>
+      </div>
       <div className={`aboutcont ${this.state.isabout && 'showabout'}`}
               //  onMouseLeave={this.state.isabout && this.about}
              >
@@ -52,40 +59,7 @@ class Cont extends React.Component{
 }
 
 function App() {
-  // конструткор нужен чтобы натсрйоить начльное состояние и свойства комопнента
-  // перед рендерингом; выполняется ОДИН раз перед первым рендером
-  // в нем нужно привязать контекст (bind) к методам
-  // this в классовых комп - ссылка на экз класса
-  // это объкт - в нем хранятся свойства стейт и метода
-  // В классах методы — это обычные функции, не "прикреплённые" жёстко к объекту.
-  // Когда метод передаётся как callback (например, в onClick), 
-  // JavaScript вызывает его в другом контексте
-  // в конструторе писать мтоды this.increment = this.increment.bind(this); 
-  // (можно не писать если метод стрелочный)
-  // ...
-  // increment() {
-    // this.setState({ count: this.state.count + 1 }); // Теперь работает
-  // }
-
-  // жизненный цикл делится на 3 этапа 
-  // монториваное - изменение - размонтирование
-
-  // монитрование - конструтор - рнедер - componentDidMount()
-  // componentDidMount() - после первогоодин раз рендера аналог юс эффект
-  // пишится как обыная функция вызыается реатком сам
-
-  // обновление
-  // shouldComponentUpdate - аналог юс эффект с массивом зависимсотей 
-  // реакт вызывает перед рендером только 
-  // реашет нужен ли рендер при изменении данных
-  // регуляция рендера через возрващаемое значени фнукцие - тру или фолс
-  // возварт вручную через ретерн 
-  // т е shouldComponentUpdate работвт как мемо но с дпо логикой для контроля?
-
-  // размонтирование - componentWillUnmount - очистка подписок
-  // componentWillUnmount(): Вызывается перед удалением.
-
-  return (
+    return (
     <div className="App">
       <Cont></Cont>
     </div>
