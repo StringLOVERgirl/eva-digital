@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --textColor: #585050;
+  --textColor: #3b3636;
 }
 
 code {
@@ -161,6 +161,13 @@ li:hover .licont {
   display: flex;
   flex-direction: column;
 }
+.titlecont::before {
+  content: '';
+  height: 1px;
+  display: block;
+  transform: translateY(-0.5em);
+  background: rgb(154, 153, 153);
+}
 .description {
   margin-left: auto;
   padding-right: 1em;
@@ -214,4 +221,10 @@ li:hover .licont {
   .title::after {
     height: 2.5vh;
   }
+}
+
+@media (min-width: 1350px) {
+  .title:after {
+    height: 2.5vh;
+}
 }
