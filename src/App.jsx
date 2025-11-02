@@ -43,7 +43,8 @@ class Cont extends React.Component{
                I'm studying frontend development and being interested in web design.{'\u00A0'}
                <br/>
                Sometimes I spend time searching for cool works by other{'\u00A0'}
-               developers and designers to get inspiration.{'\u00A0'} <br />
+               developers and designers to get inspiration.{'\u00A0'} 
+               { window.innerWidth<550?'' : <br />}
                I also come up with logos.
              </div>
     </header>
