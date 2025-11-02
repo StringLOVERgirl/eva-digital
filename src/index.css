@@ -277,6 +277,9 @@ transform: translateZ(0);
     transition: top 0.8s var(--cubic);
     transform: translate(-50%,-50%);
   }
+  li:hover .licont {
+    transform: initial;
+  }
   .abouton {
     top: 62%
   }
