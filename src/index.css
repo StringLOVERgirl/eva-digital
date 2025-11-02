@@ -327,9 +327,9 @@ transform: translateZ(0);
     background: initial;
     color: initial;
   }
-  .liactive {
-    background: var(--textColor) !important;
-    color: white !important;
+  ul li.liactive {
+    background: var(--textColor);
+    color: white;
   }
   .abouton {
     top: 62%
