@@ -238,8 +238,11 @@ li:hover .licont {
   padding-bottom: 2em;
   transform-origin: left bottom;
   /* transform: scale(0.5); */
+  will-change: height, width;
   transition: width 0.8s var(--cubic), height 0.8s var(--cubic);
   box-sizing: content-box;
+  transform: translateZ(0);
+
 }
 .mockupcont:hover {
   height: 50vh;
@@ -257,7 +260,8 @@ li:hover .licont {
   height: 100%;
   border-radius: 35px;
   aspect-ratio: inherit;
-  
+  will-change: height, width;
+transform: translateZ(0);
 }
 
 .hidetext {
