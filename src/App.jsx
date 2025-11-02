@@ -22,7 +22,7 @@ class Cont extends React.Component{
       this.setState(prev=>({
         ...prev,
         iscontact: isabout? false :true,
-        isabout: isabout? target : false, 
+        isabout: isabout? true : false, 
         offset: !prev.offset}))
 
     if (isMobile){
@@ -91,8 +91,7 @@ class Cont extends React.Component{
   </div>
 }
 
-function App() {
-  return (
+function App() {  return (
     <div className="App">
       <Cont></Cont>
       {/* <div className="copy copymob">2025© Meg. All rights reserved.</div> */}
