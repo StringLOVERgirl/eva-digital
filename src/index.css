@@ -146,8 +146,10 @@ li:hover .licont {
 }
 
 .workcont {
-  margin-inline: auto;
-  margin-top: 20vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-60%);
 }
 
 .work {
@@ -164,6 +166,8 @@ li:hover .licont {
   font-weight: 300;
   padding: 2em;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   width: fit-content;
   display: flex;
@@ -187,6 +191,7 @@ li:hover .licont {
   font-size: 2em;
   font-weight: 400;
   position: relative;
+  white-space: nowrap;
   display: flex;
   text-decoration: none;
   color: var(--textColor);
@@ -208,12 +213,12 @@ li:hover .licont {
   height: 100vh;
   position: absolute;
   width: 22vw;
-  background: #f1ebff;
+  /* background: #f1ebff; */
 }
 
 @media (max-width: 550px) {
   .workcont {
-    margin-top: 30vh;
+    transform: translate(-50%,-50%);
   }
   .aboutcont {
     width: 70vw;
@@ -227,7 +232,13 @@ li:hover .licont {
     display: none;
   }
   .title::after {
-    height: 2.5vh;
+    height: 1.8vh;
+  }
+  .title {
+    font-size: 1.4em;
+  }
+  .description {
+    font-size: 1em;
   }
 }
 
