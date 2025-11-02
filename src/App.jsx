@@ -21,9 +21,9 @@ class Cont extends React.Component{
     
       this.setState(prev=>({
         ...prev,
-        iscontact: isabout? false :true,
-        isabout: isabout? true : false, 
-        offset: !prev.offset}))
+        iscontact: isabout? false :!prev.iscontact ,
+        isabout: isabout? !prev.isabout : false, 
+        offset: isabout?!prev.isabout:false}))
 
     if (isMobile){
       this.setState(prev=>({
