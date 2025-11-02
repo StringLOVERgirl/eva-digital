@@ -311,7 +311,7 @@ transform: translateZ(0);
   }
   li {
     /* padding-block: unset; */
-    transition: background 0.3s;
+    transition: background 0.4s;
   }
   /* li {whi} */
   li:hover .licont {
