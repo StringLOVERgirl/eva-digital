@@ -24,7 +24,9 @@ code {
 
 .cont {
   height: 100vh;
-  background: white;
+  background-color: white;
+  /* background: radial-gradient(farthest-corner, rgb(227, 202, 202), transparent) 50vw ; */
+  /* background: radial-gradient(farthest-corner, rgba(205, 133, 206, 0.445), transparent 70%) -10em -15em / 40vw 40vw no-repeat; */
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -92,10 +94,10 @@ nav {
   padding-right: 2.5em;
 }
 ul {
-  font-size: 1.25em;
+  font-size: 1.3em;
   display: flex;
   font-family: helvetica neue;
-  gap: 1.5em;
+  /* gap: 1.5em; */
   font-weight: 300;
   overflow: hidden;
   color: var(--textColor);
@@ -104,6 +106,9 @@ li {
   list-style: none;
   position: relative;
   pointer-events: all;
+  padding-inline: 1em;
+  padding-block: 0.02em;
+  border-radius: 35px;
 }
 .liabout {
   right: 0;
@@ -146,13 +151,22 @@ li {
   transform: translateY(0%);
   top: 110%;
   color: var(--textColor);
+  /* padding-inline: 1em; */
 }
 .licont {
-  transition: transform 0.8s var(--cubic);
+  transition: transform 0.75s var(--cubic);
   cursor: pointer;
 }
 li:hover .licont {
   transform: translateY(-110%);
+}
+li:hover .licont::after{
+  color: white;
+}
+li:hover {
+  /* border-radius: 35px; */
+  background: #3b3636;
+  color: white;
 }
 
 .workcont {
@@ -279,6 +293,15 @@ transform: translateZ(0);
   }
   li:hover .licont {
     transform: initial;
+  }
+
+  li:hover .licont::after{
+    color: initial;
+  }
+  li:hover {
+    /* border-radius: 35px; */
+    background: initial;
+    color: initial;
   }
   .abouton {
     top: 62%
