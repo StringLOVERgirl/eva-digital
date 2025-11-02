@@ -14,7 +14,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   --textColor: #3b3636;
-  overflow-x: hidden;
   --cubic:  cubic-bezier(0.65, 0, 0.35, 1)
 }
 
