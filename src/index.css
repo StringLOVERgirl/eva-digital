@@ -257,7 +257,7 @@ li:hover .licont {
   /* po */
 }
 .mockup {
-  background: url(./assets/zip-bag-package-mockup.png) center 85% / cover;
+  background: url(./assets/mocup.png) center 90% / cover;
   height: 100%;
   border-radius: 35px;
   aspect-ratio: inherit;
