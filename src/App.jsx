@@ -5,22 +5,32 @@ import './App.css'
 class Cont extends React.Component{
   constructor(){
     super()
-    this.state = {isabout: false, iscontact: false, offset: false}
+    this.state = {isabout: false, iscontact: false, offset: false, isactie: {left: false, right: false}}
   }
 
   hide = () => {
     if(this.state.isabout || this.state.iscontact){
-      this.setState(_=>({iscontact: false ,isabout: false, offset: false}))
+      this.setState(prev=>({...prev,iscontact: false ,isabout: false, offset: false}))
     }
   }
 
 
   about = (target) => {
-    if (target != 'link'){
-      this.setState(prev=>({iscontact: false ,isabout: !prev.isabout, offset: !prev.offset}))
-    } else {
-      this.setState(prev=>({isabout: false ,iscontact: !prev.iscontact, offset: false }))
-    }
+    const isabout = target != 'link'
+    const isMobile = window.innerWidth < 550
+    
+      this.setState(prev=>({
+        ...prev,
+        iscontact: isabout? false :true,
+        isabout: isabout? target : false, 
+        offset: !prev.offset}))
+
+    if (isMobile){
+      this.setState(prev=>({
+        ...prev, 
+        isactie: isabout ?  {left: true, right: false}  : {left: false, right: true} })) 
+        setTimeout(()=>this.setState(prev=>({...prev, isactie: {left: false, right: false} })),300)
+    } 
   }
 
   render=()=><div className='cont'>
@@ -31,12 +41,12 @@ class Cont extends React.Component{
       </div>
       <nav>
         <ul>
-             <li onClick={this.about}>
+             <li onClick={this.about} className={this.state.isactie.left ? 'liactive' :''}>
                 <div className="licont"  aria-label='about me'>
                    about me
                 </div>
              </li>
-             <li onClick={()=>this.about('link')}>
+             <li onClick={()=>this.about('link')} className={this.state.isactie.right ? 'liactive' : ''}>
                 <div className="licont" aria-label='contact'>contact</div>
              </li >
         </ul>
