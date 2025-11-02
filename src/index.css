@@ -122,6 +122,7 @@ li {
   right: 1em;
   z-index: -1;
   width: 25vw;
+  pointer-events: none;
   /* font-size: 1.2em; */
   font-size: 1.5em;
   font-family: helvetica neue;
@@ -133,7 +134,7 @@ li {
   position: absolute;
   filter: blur(3px);
   opacity: 0;
-  pointer-events: all;
+  /* pointer-events: all; */
 
   color: var(--textColor);
   transition: filter 0.7s var(--cubic), opacity 0.7s var(--cubic);
@@ -141,6 +142,7 @@ li {
 .showabout{
   filter: unset;
   opacity: 1;
+  pointer-events: all;
 }
 .licont::after {
   content: attr(aria-label);
