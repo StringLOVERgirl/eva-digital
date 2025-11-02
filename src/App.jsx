@@ -71,7 +71,7 @@ class Cont extends React.Component{
     </div>
     <div className="titlecont">
       <div className="texttitle description">*latest work</div>
-      <a className="texttitle title" href='https://www.behance.net/gallery/237686227/latest-project' target='_blank'>eva digital</a>
+      <a className="texttitle title" href='https://www.behance.net/gallery/237735677/latest-project' target='_blank'>eva digital</a>
     </div>
 
     <div className="mockupcont">
