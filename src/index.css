@@ -196,6 +196,7 @@ li:hover {
   transform: translateX(-50%);
   position: absolute;
   width: fit-content;
+  z-index: 2;
   display: flex;
   flex-direction: column;
 }
@@ -284,6 +285,7 @@ transform: translateZ(0);
   height: 100vh;
   width: 100%;
   position: absolute;
+  z-index: 1;
   /* background: red; */
 }
 
@@ -295,6 +297,9 @@ transform: translateZ(0);
   font-family: helvetica neue ;
   color: var(--textColor);
 }
+.copymob{
+  opacity: 0;
+}
 
 @media (max-width: 550px) {
   .workcont {
@@ -305,7 +310,7 @@ transform: translateZ(0);
     font-size: 1.1em;
   }
   li {
-    padding-block: unset;
+    /* padding-block: unset; */
   }
   /* li {whi} */
   li:active .licont {
@@ -352,6 +357,16 @@ transform: translateZ(0);
   }
   .mockuptext {
     margin-inline: auto ;
+  }
+  .copy {
+opacity: 0; 
+ }
+  .copymob{
+    z-index: 34;
+    bottom: 1em;
+    opacity: 1;
+    /* bo */
+    margin-inline: auto;
   }
 }
 
