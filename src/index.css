@@ -4,6 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -13,6 +14,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   --textColor: #3b3636;
+  overflow-x: hidden;
+  --cubic:  cubic-bezier(0.65, 0, 0.35, 1)
 }
 
 code {
@@ -25,7 +28,7 @@ code {
   background: white;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -63,14 +66,14 @@ header {
   will-change: transform;
   display: block;
   transform: translateX(100%);
-  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1), color 0.3s;
+  transition: transform 0.8s var(--cubic), color 0.3s;
 }
 .email {
   cursor: pointer;
   display: block;
   text-decoration: none;
   transform: translateX(100%);
-  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1), color 0.3s;
+  transition: transform 0.8s var(--cubic), color 0.3s;
   color: var(--textColor);
 }
 .link:hover, .email:hover{
@@ -121,7 +124,7 @@ li {
   filter: blur(4px);
   opacity: 0;
   color: var(--textColor);
-  transition: filter 0.7s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.7s cubic-bezier(0.65, 0, 0.35, 1);;;
+  transition: filter 0.7s var(--cubic), opacity 0.7s var(--cubic);
 }
 .showabout{
   filter: unset;
@@ -138,7 +141,7 @@ li {
   color: var(--textColor);
 }
 .licont {
-  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);;
+  transition: transform 0.8s var(--cubic);
   cursor: pointer;
 }
 li:hover .licont {
@@ -216,6 +219,40 @@ li:hover .licont {
   /* background: #f1ebff; */
 }
 
+.mockupcont {
+  height: 20vh;
+  position: absolute;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  bottom: 0;
+  padding: 1em;
+  padding-bottom: 2em;
+  transform-origin: left bottom;
+  /* transform: scale(0.5); */
+  transition: width 0.8s var(--cubic), height 0.8s var(--cubic);
+  box-sizing: content-box;
+}
+.mockupcont:hover {
+  height: 50vh;
+}
+.mockuptext {
+  font-family: helvetica neue;
+  font-size: 1.3em;
+  text-transform: capitalize;
+  font-weight: 300;
+  
+  /* po */
+}
+.mockup {
+  background: url(./assets/zip-bag-package-mockup.png) center 85% / cover;
+  height: 100%;
+  border-radius: 35px;
+  aspect-ratio: inherit;
+  
+}
+
 @media (max-width: 550px) {
   .workcont {
     transform: translate(-50%,-50%);
@@ -239,6 +276,16 @@ li:hover .licont {
   }
   .description {
     font-size: 1em;
+  }
+  .mockupcont {
+    top: 100vh;
+    height: 50vh;
+    width: 80vw;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .mockuptext {
+    margin-inline: auto ;
   }
 }
 
