@@ -314,7 +314,7 @@ transform: translateZ(0);
   }
   /* li {whi} */
   li:active .licont {
-    transform: translateY(-110%);;
+    transform: initial;
   }
 
   li:active .licont::after{
