@@ -126,7 +126,7 @@ li {
   text-indent: 4em;
   top: 17vh;
   position: absolute;
-  filter: blur(4px);
+  /* filter: blur(4px); */
   opacity: 0;
   pointer-events: all;
 
@@ -134,7 +134,7 @@ li {
   transition: filter 0.7s var(--cubic), opacity 0.7s var(--cubic);
 }
 .showabout{
-  filter: unset;
+  /* filter: unset; */
   opacity: 1;
 }
 .licont::after {
