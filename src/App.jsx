@@ -42,12 +42,12 @@ class Cont extends React.Component{
       <nav>
         <ul>
              <li onClick={this.about} className={this.state.isactie.left ? 'liactive' :''}>
-                <div className="licont"  aria-label='about me'>
-                   about me
+                <div className="licont"  aria-label='/about me'>
+                   /about me
                 </div>
              </li>
              <li onClick={()=>this.about('link')} className={this.state.isactie.right ? 'liactive' : ''}>
-                <div className="licont" aria-label='contact'>contact</div>
+                <div className="licont" aria-label='/contact'>/contact</div>
              </li >
         </ul>
       </nav>
@@ -84,7 +84,8 @@ class Cont extends React.Component{
   </div>
 }
 
-function App() {  return (
+function App() {
+  return (
     <div className="App">
       <Cont></Cont>
       {/* <div className="copy copymob">2025© Meg. All rights reserved.</div> */}
