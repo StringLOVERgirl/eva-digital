@@ -313,8 +313,8 @@ transform: translateZ(0);
     /* padding-block: unset; */
   }
   /* li {whi} */
-  li:active .licont {
-    transform: initial;
+  li:hover .licont {
+    transform: unset;
   }
 
   li:active .licont::after{
