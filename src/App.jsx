@@ -8,6 +8,13 @@ class Cont extends React.Component{
     this.state = {isabout: false, iscontact: false}
   }
 
+  hide = () => {
+    if(this.state.isabout || this.state.iscontact){
+      this.setState(_=>({iscontact: false ,isabout: false}))
+    }
+  }
+
+
   about = (target) => {
     if (target != 'link'){
       this.setState(prev=>({iscontact: false ,isabout: !prev.isabout}))
@@ -17,6 +24,7 @@ class Cont extends React.Component{
   }
 
   render=()=><div className='cont'>
+    <div className="hidetext" onClick={this.hide}></div>
     <header>
       <div className="namecont">
         <div className="name">M.</div>
