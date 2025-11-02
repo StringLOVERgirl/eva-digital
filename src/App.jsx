@@ -47,13 +47,19 @@ class Cont extends React.Component{
       </div>
       <div className={`aboutcont ${this.state.isabout && 'showabout'}`}
               //  onMouseLeave={this.state.isabout && this.about}
-             >
-               I'm studying frontend development and being interested in web design.{'\u00A0'}
+             > I'm Meg.
+              I'm learning front-end development. Besides that, I enjoy web design{'\u00A0'}—{'\u00A0'}
+              I spend time exploring projects by other designers and developers 
+              to learn and get inspired by their work. I also like creating 
+              logos and plan to share my designs on Behance.{'\u00A0'}
+              <br />
+              I'm open to opportunities to collaborate on your projects.
+               {/* I'm studying frontend development and being interested in web design.{'\u00A0'}
                <br/>
                Sometimes I spend time searching for cool works by other{'\u00A0'}
                developers and designers to get inspiration.{'\u00A0'} 
                { window.innerWidth<550?'' : <br />}
-               I also come up with logos.
+               I also come up with logos. */}
              </div>
     </header>
     <div className="violet"></div>
@@ -74,6 +80,39 @@ class Cont extends React.Component{
 }
 
 function App() {
+  // конструткор нужен чтобы натсрйоить начльное состояние и свойства комопнента
+  // перед рендерингом; выполняется ОДИН раз перед первым рендером
+  // в нем нужно привязать контекст (bind) к методам
+  // this в классовых комп - ссылка на экз класса
+  // это объкт - в нем хранятся свойства стейт и метода
+  // В классах методы — это обычные функции, не "прикреплённые" жёстко к объекту.
+  // Когда метод передаётся как callback (например, в onClick), 
+  // JavaScript вызывает его в другом контексте
+  // в конструторе писать мтоды this.increment = this.increment.bind(this); 
+  // (можно не писать если метод стрелочный)
+  // ...
+  // increment() {
+    // this.setState({ count: this.state.count + 1 }); // Теперь работает
+  // }
+
+  // жизненный цикл делится на 3 этапа 
+  // монториваное - изменение - размонтирование
+
+  // монитрование - конструтор - рнедер - componentDidMount()
+  // componentDidMount() - после первогоодин раз рендера аналог юс эффект
+  // пишится как обыная функция вызыается реатком сам
+
+  // обновление
+  // shouldComponentUpdate - аналог юс эффект с массивом зависимсотей 
+  // реакт вызывает перед рендером только 
+  // реашет нужен ли рендер при изменении данных
+  // регуляция рендера через возрващаемое значени фнукцие - тру или фолс
+  // возварт вручную через ретерн 
+  // т е shouldComponentUpdate работвт как мемо но с дпо логикой для контроля?
+
+  // размонтирование - componentWillUnmount - очистка подписок
+  // componentWillUnmount(): Вызывается перед удалением.
+
   return (
     <div className="App">
       <Cont></Cont>
