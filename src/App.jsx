@@ -42,7 +42,7 @@ class Cont extends React.Component{
         </ul>
       </nav>
       <div className="behance">
-        <a target='_blank' href="https://www.behance.net/b40cfe62" className={`link ${this.state.iscontact && 'showcontact'}`}>me on Behance</a>
+        <a target='_blank' href="https://www.behance.net/megsoft" className={`link ${this.state.iscontact && 'showcontact'}`}>me on Behance</a>
         <a className={`email ${this.state.iscontact && 'showcontact'}`} href='mailto:megsoft007@gmail.com'>megsoft007@gmail.com</a>
       </div>
       <div className={`aboutcont ${this.state.isabout && 'showabout'}`}
@@ -80,7 +80,6 @@ class Cont extends React.Component{
 }
 
 function App() {
-
   return (
     <div className="App">
       <Cont></Cont>
