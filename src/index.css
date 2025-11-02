@@ -286,22 +286,31 @@ transform: translateZ(0);
   /* background: red; */
 }
 
+.copy {
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
+  font-size: 0.75em;
+  font-family: helvetica neue ;
+  color: var(--textColor);
+}
+
 @media (max-width: 550px) {
   .workcont {
     transition: top 0.8s var(--cubic);
     transform: translate(-50%,-50%);
   }
-  li:hover .licont {
-    transform: initial;
+  li:active .licont {
+    transform: translateY(-110%);;
   }
 
-  li:hover .licont::after{
-    color: initial;
+  li:active .licont::after{
+    color: white;
   }
-  li:hover {
+  li:active {
     /* border-radius: 35px; */
-    background: initial;
-    color: initial;
+    background: var(--textColor);
+    color: white;
   }
   .abouton {
     top: 62%
