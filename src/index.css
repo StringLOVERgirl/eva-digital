@@ -106,7 +106,7 @@ li {
   height: 40vh;
 }
 .aboutcont {
-  right: 0;
+  right: 1em;
   z-index: -1;
   width: 25vw;
   /* font-size: 1.2em; */
