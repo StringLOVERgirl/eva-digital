@@ -154,6 +154,7 @@ li {
   /* padding-inline: 1em; */
 }
 .licont {
+  white-space: nowrap;
   transition: transform 0.75s var(--cubic);
   cursor: pointer;
 }
@@ -300,6 +301,13 @@ transform: translateZ(0);
     transition: top 0.8s var(--cubic);
     transform: translate(-50%,-50%);
   }
+  ul {
+    font-size: 1.1em;
+  }
+  li {
+    padding-block: unset;
+  }
+  /* li {whi} */
   li:active .licont {
     transform: translateY(-110%);;
   }
