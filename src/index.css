@@ -247,6 +247,7 @@ li:hover {
   height: 20vh;
   position: absolute;
   width: 30vw;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 1em;

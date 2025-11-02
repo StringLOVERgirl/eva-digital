@@ -56,7 +56,6 @@ class Cont extends React.Component{
         <a className={`email ${this.state.iscontact && 'showcontact'}`} href='mailto:megsoft007@gmail.com'>megsoft007@gmail.com</a>
       </div>
       <div className={`aboutcont ${this.state.isabout && 'showabout'}`}
-              //  onMouseLeave={this.state.isabout && this.about}
              > I'm Meg.
               I'm learning front-end development. Besides that, I enjoy web design{'\u00A0'}—{'\u00A0'}
               I spend time exploring projects by other designers and developers 
@@ -64,12 +63,6 @@ class Cont extends React.Component{
               logos and plan to share my designs on Behance.{'\u00A0'}
               <br />
               I'm open to opportunities to collaborate on your projects.
-               {/* I'm studying frontend development and being interested in web design.{'\u00A0'}
-               <br/>
-               Sometimes I spend time searching for cool works by other{'\u00A0'}
-               developers and designers to get inspiration.{'\u00A0'} 
-               { window.innerWidth<550?'' : <br />}
-               I also come up with logos. */}
              </div>
     </header>
     <div className="violet"></div>
@@ -91,7 +84,8 @@ class Cont extends React.Component{
   </div>
 }
 
-function App() {  return (
+function App() {
+  return (
     <div className="App">
       <Cont></Cont>
       {/* <div className="copy copymob">2025© Meg. All rights reserved.</div> */}
