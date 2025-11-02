@@ -269,7 +269,11 @@ li:hover .licont {
 
 @media (max-width: 550px) {
   .workcont {
+    transition: top 0.8s var(--cubic);
     transform: translate(-50%,-50%);
+  }
+  .abouton {
+    top: 60%
   }
   .aboutcont {
     width: 85vw;

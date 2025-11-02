@@ -5,21 +5,21 @@ import './App.css'
 class Cont extends React.Component{
   constructor(){
     super()
-    this.state = {isabout: false, iscontact: false}
+    this.state = {isabout: false, iscontact: false, offset: false}
   }
 
   hide = () => {
     if(this.state.isabout || this.state.iscontact){
-      this.setState(_=>({iscontact: false ,isabout: false}))
+      this.setState(_=>({iscontact: false ,isabout: false, offset: false}))
     }
   }
 
 
   about = (target) => {
     if (target != 'link'){
-      this.setState(prev=>({iscontact: false ,isabout: !prev.isabout}))
+      this.setState(prev=>({iscontact: false ,isabout: !prev.isabout, offset: !prev.offset}))
     } else {
-      this.setState(prev=>({isabout: false ,iscontact: !prev.iscontact}))
+      this.setState(prev=>({isabout: false ,iscontact: !prev.iscontact, offset: false }))
     }
   }
 
@@ -63,7 +63,7 @@ class Cont extends React.Component{
              </div>
     </header>
     <div className="violet"></div>
-    <div className="workcont">
+    <div className={`workcont ${this.state.offset?'abouton':''}`}>
       <div className="work"></div>
     </div>
     <div className="titlecont">
@@ -80,39 +80,6 @@ class Cont extends React.Component{
 }
 
 function App() {
-  // конструткор нужен чтобы натсрйоить начльное состояние и свойства комопнента
-  // перед рендерингом; выполняется ОДИН раз перед первым рендером
-  // в нем нужно привязать контекст (bind) к методам
-  // this в классовых комп - ссылка на экз класса
-  // это объкт - в нем хранятся свойства стейт и метода
-  // В классах методы — это обычные функции, не "прикреплённые" жёстко к объекту.
-  // Когда метод передаётся как callback (например, в onClick), 
-  // JavaScript вызывает его в другом контексте
-  // в конструторе писать мтоды this.increment = this.increment.bind(this); 
-  // (можно не писать если метод стрелочный)
-  // ...
-  // increment() {
-    // this.setState({ count: this.state.count + 1 }); // Теперь работает
-  // }
-
-  // жизненный цикл делится на 3 этапа 
-  // монториваное - изменение - размонтирование
-
-  // монитрование - конструтор - рнедер - componentDidMount()
-  // componentDidMount() - после первогоодин раз рендера аналог юс эффект
-  // пишится как обыная функция вызыается реатком сам
-
-  // обновление
-  // shouldComponentUpdate - аналог юс эффект с массивом зависимсотей 
-  // реакт вызывает перед рендером только 
-  // реашет нужен ли рендер при изменении данных
-  // регуляция рендера через возрващаемое значени фнукцие - тру или фолс
-  // возварт вручную через ретерн 
-  // т е shouldComponentUpdate работвт как мемо но с дпо логикой для контроля?
-
-  // размонтирование - componentWillUnmount - очистка подписок
-  // componentWillUnmount(): Вызывается перед удалением.
-
   return (
     <div className="App">
       <Cont></Cont>
