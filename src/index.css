@@ -151,7 +151,7 @@ li:hover .licont {
 }
 
 .work {
-  background: url(./assets/actual.png) center / 151%;
+  background: url(./assets/actual_scaled.png) center / 151%;
   width: 250px;
   aspect-ratio: 1/1;
   max-width: 100vw;
