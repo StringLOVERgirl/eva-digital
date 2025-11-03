@@ -84,8 +84,7 @@ class Cont extends React.Component{
   </div>
 }
 
-function App() {
-  return (
+function App() {  return (
     <div className="App">
       <Cont></Cont>
       {/* <div className="copy copymob">2025© Meg. All rights reserved.</div> */}

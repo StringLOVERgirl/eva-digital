@@ -14,6 +14,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   --textColor: #3b3636;
+  --bgColor: #f1ebff;
   --cubic:  cubic-bezier(0.65, 0, 0.35, 1)
 }
 
@@ -180,7 +181,8 @@ li:hover {
 }
 
 .work {
-  background: url(./assets/actual_scaled.png) center / 151%;
+  background: url(./assets/actual_scaled_fullfilled.png) center / 116%;
+  background-color: var(--bgColor);
   width: 250px;
   aspect-ratio: 1/1;
   max-width: 100vw;
