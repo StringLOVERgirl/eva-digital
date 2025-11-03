@@ -405,4 +405,7 @@ opacity: 0;
   .title:after {
     height: 2.5vh;
 }
+.mockupcont {
+  height: 15vh;
+}
 }

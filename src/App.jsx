@@ -16,7 +16,9 @@ class Cont extends React.Component{
     this.camera = null;
     this.renderer = null;
     this.textMesh = null;
-    this.animation = null
+    this.animation = null;
+    this.size = 2.3
+    this.scale = 5
   }
 
   hide = () => {
@@ -34,22 +36,46 @@ class Cont extends React.Component{
   // return gl;
   }
 
+  setsize = () => {
+    let width = window.innerWidth / this.scale;
+    let height = window.innerHeight / this.scale;
+    let size 
+    if(window.innerWidth<550){
+       size = 3
+       width = window.innerWidth / 3;
+       height = window.innerHeight / 8;
+    } else if (window.innerWidth>1350){
+      size = 4
+    }
+      else {size=this.size}
+    const aspect = width / height;
+
+    this.camera.left = -size * aspect;
+    this.camera.right = size * aspect;
+    this.camera.top = size;
+    this.camera.bottom = -size;
+    this.camera.updateProjectionMatrix();
+    // Обновляем рендерер
+    this.renderer.setSize(width, height);
+    this.renderer.setPixelRatio(window.devicePixelRatio)
+  }
+
   componentDidMount(){
 
-    window.addEventListener('resize', )
+    window.addEventListener('resize', this.setsize)
     
     const canvas = document.createElement('canvas');
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    const scale = 5
-    const width = window.innerWidth/scale;   // ← ШИРИНА!
-    const height = window.innerHeight/scale // ← ВЫСОТА!
-    const aspect = width/height
-    const size = 2
+    // const scale = 5
+    // const width = window.innerWidth/this.scale;   // ← ШИРИНА!
+    // const height = window.innerHeight/this.scale // ← ВЫСОТА!
+    // const aspect = width/height
+    // const size = 2
 
   console.log(FontLoader)
 
   this.scene = new THREE.Scene();
-    this.camera = new THREE.OrthographicCamera(-size*aspect,size*aspect,size,-size, 0.1, 1000);
+    this.camera = new THREE.OrthographicCamera(0,0,0,0, 0.1, 1000);
     this.camera.position.z = 5
 
     this.renderer = new THREE.WebGLRenderer({ 
@@ -57,7 +83,9 @@ class Cont extends React.Component{
       antialias: true,
       context: gl, // Ручной WebGL1
     });
-    this.renderer.setSize(width,height);
+    this.setsize()
+    
+    // this.renderer.setSize(width,height);
     this.mountRef.current.appendChild(this.renderer.domElement);
 
 
@@ -189,12 +217,9 @@ class Cont extends React.Component{
 }
 
 componentWillUnmount(){
-  
+  cancelAnimationFrame(this.animation)
   this.mountRef.current.removeChild(this.renderer.domElement);
-cancelAnimationFrame(this.animation)
-this.textMesh = null
-this.renderer = null
-this.scene=null
+  window.removeEventListener('resize', this.setsize)
 }
 
 
@@ -307,8 +332,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="outouforder" style={{height:'100vh', width: '100vw', position: 'absolute', zIndex: 3}}>currently developing</div>
-      {/* <Cont></Cont> */}
+      {/* <div className="outouforder" style={{height:'100vh', width: '100vw', position: 'absolute', zIndex: 3}}>currently developing</div> */}
+      <Cont></Cont>
       {/* <div className="copy copymob">2025© Meg. All rights reserved.</div> */}
     </div>
   )
