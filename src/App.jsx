@@ -41,7 +41,7 @@ class Cont extends React.Component{
     let height = window.innerHeight / this.scale;
     let size 
     if(window.innerWidth<550){
-       size = 3
+       size = 2.5
        width = window.innerWidth / 3;
        height = window.innerHeight / 8;
     } else if (window.innerWidth>1350){
