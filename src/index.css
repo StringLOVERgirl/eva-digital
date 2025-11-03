@@ -35,7 +35,7 @@ canvas {
 .cont {
   height: 100vh;
   background-color: white;
-  /* background: radial-gradient(farthest-corner, rgb(227, 202, 202), transparent) 50vw ; */
+  background: radial-gradient(farthest-corner, rgba(227, 202, 202, 0.604), transparent) 50vw ;
   /* background: radial-gradient(farthest-corner, rgba(205, 133, 206, 0.445), transparent 70%) -10em -15em / 40vw 40vw no-repeat; */
   display: flex;
   flex-direction: column;
