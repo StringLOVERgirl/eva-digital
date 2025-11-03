@@ -35,12 +35,14 @@ class Cont extends React.Component{
   }
 
   componentDidMount(){
+
+    window.addEventListener('resize', )
     
     const canvas = document.createElement('canvas');
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    
-    const width = window.innerWidth/5;   // ← ШИРИНА!
-    const height = window.innerHeight/5 // ← ВЫСОТА!
+    const scale = 5
+    const width = window.innerWidth/scale;   // ← ШИРИНА!
+    const height = window.innerHeight/scale // ← ВЫСОТА!
     const aspect = width/height
     const size = 2
 
@@ -305,7 +307,8 @@ function App() {
 
   return (
     <div className="App">
-      <Cont></Cont>
+      <div className="outouforder" style={{height:'100vh', width: '100vw', position: 'absolute', zIndex: 3}}>currently developing</div>
+      {/* <Cont></Cont> */}
       {/* <div className="copy copymob">2025© Meg. All rights reserved.</div> */}
     </div>
   )
