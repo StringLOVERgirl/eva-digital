@@ -25,9 +25,9 @@ code {
 canvas {
   pointer-events: none;
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  transform: translate(-5%,-5%);
+  transform: translate(-50%,-5%);
   /* background: #00000091; */
   /* border: solid 1px; */
 }
@@ -57,7 +57,7 @@ header {
 }
 .name {
   font-size: 3em;
-  opacity: 0;
+  /* opacity: 0; */
   text-decoration: unset;
   color: var(--textColor);
   text-transform: capitalize;
@@ -381,6 +381,7 @@ transform: translateZ(0);
   li {
     /* padding-block: unset; */
     transition: background 0.4s;
+    backdrop-filter: blur(2px);
   }
   /* li {whi} */
   li:hover .licont {
