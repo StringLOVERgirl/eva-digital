@@ -95,7 +95,7 @@ class Cont extends React.Component{
       });
 
       this.textMesh = new THREE.Mesh(geometry, material);
-      this.scene.add(this.textMesh);
+      // this.scene.add(this.textMesh);
     }
   );
 
