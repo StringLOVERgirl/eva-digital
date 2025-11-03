@@ -46,7 +46,7 @@ class Cont extends React.Component{
 
   this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(75, 1/1, 0.1, 1000);
-    this.camera.position.z = 10;
+    this.camera.position.z =12
 
     this.renderer = new THREE.WebGLRenderer({ 
       canvas: canvas,
@@ -54,7 +54,7 @@ class Cont extends React.Component{
       context: gl, // Ручной WebGL1
     });
     this.renderer.setSize(width,height);
-    this.mountRef.current.appendChild(this.renderer.domElement);
+    // this.mountRef.current.appendChild(this.renderer.domElement);
 
 
     new THREE.TextureLoader().load(
@@ -73,7 +73,6 @@ class Cont extends React.Component{
   loader.load(
     'https://threejs.org/examples/fonts/helvetiker_bold.typeface.json',
     (font) => {
-      console.log('FONT LOADED, creating text');
       const geometry = new TextGeometry('KEEP CALM', {
         font: font,
         size: 2,
@@ -95,7 +94,7 @@ class Cont extends React.Component{
       });
 
       this.textMesh = new THREE.Mesh(geometry, material);
-      // this.scene.add(this.textMesh);
+      this.scene.add(this.textMesh);
     }
   );
 
