@@ -187,7 +187,10 @@ li:hover {
   position: absolute;
   left: 50%;
   top: 50%;
+  gap: 0.5em;
   transform: translate(-50%,-60%);
+  pointer-events: all;
+  display: flex;
 }
 
 .work {
@@ -197,6 +200,46 @@ li:hover {
   aspect-ratio: 1/1;
   max-width: 100vw;
   border-radius: 27px;
+}
+
+.colorscont {
+  /* flex-basis: 1; */
+  width: 8em;
+  border-radius: 19px;
+  border: solid 1px rgba(128, 128, 128, 0.222);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 0.25em;
+  padding: 0.5em;
+  font-family: helvetica neue;
+  font-weight: 300;
+  color: var(--textColor);
+}
+.color {
+  flex: 1 1 auto;
+  background: violet;
+  width: 100%;
+  border-radius: 10px;
+    display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.percent {
+  padding: 0.5em;
+}
+.colorname {
+  font-size: 1.25em;
+  margin-top: auto;
+  margin-left: auto;
+  padding: 0.1em;
+  padding-left: 0.2em;
+}
+.top {
+  background: #fc202099;
+}
+.bottom {
+  background: #f1ebff;
 }
 
 .titlecont {
@@ -407,5 +450,15 @@ opacity: 0;
 }
 .mockupcont {
   height: 15vh;
+}
+.work {
+  min-width: 280px;
+}
+.colorscont {
+  width: 8.5em;
+}
+.mockupcont:hover {
+
+  height: 40vh;
 }
 }

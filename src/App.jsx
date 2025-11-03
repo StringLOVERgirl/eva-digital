@@ -279,6 +279,18 @@ componentWillUnmount(){
     <div className="violet"></div>
     <div className={`workcont ${this.state.offset?'abouton':''}`}>
       <div className="work"></div>
+{/* 
+      <div className="colorscont">
+        <div className="color top">
+          <div className="percent">15%</div>
+          <div className="colorname redname">#fc202099</div>
+        </div>
+        <div className="color bottom">
+           <div className="percent">85%</div>
+           <div className="colorname violetname">#f1ebff</div>
+        </div>
+      </div> */}
+
     </div>
     <div className="titlecont">
       <div className="texttitle description">*latest work</div>
