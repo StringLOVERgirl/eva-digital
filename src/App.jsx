@@ -18,7 +18,8 @@ class Cont extends React.Component{
     this.textMesh = null;
     this.animation = null;
     this.size = 2.3
-    this.scale = 5
+    this.scale = 5,
+    this.prevwidth = window.innerWidth
   }
 
   hide = () => {
@@ -37,6 +38,10 @@ class Cont extends React.Component{
   }
 
   setsize = () => {
+    if (Math.abs((window.innerWidth - this.prevwidth) < 50 )){
+      this.innerWidth = window.innerWidth
+      return
+    }
     let width = window.innerWidth / this.scale;
     let height = window.innerHeight / this.scale;
     let size 
