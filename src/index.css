@@ -22,6 +22,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+canvas {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-5%,-5%);
+  /* background: #00000091; */
+  /* border: solid 1px; */
+}
 
 .cont {
   height: 100vh;
@@ -48,6 +57,7 @@ header {
 }
 .name {
   font-size: 3em;
+  opacity: 0;
   text-decoration: unset;
   color: var(--textColor);
   text-transform: capitalize;
