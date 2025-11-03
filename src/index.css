@@ -371,6 +371,9 @@ transform: translateZ(0);
 }
 
 @media (max-width: 550px) {
+  .cont {
+    background: unset;
+  }
   .workcont {
     transition: top 0.8s var(--cubic);
     transform: translate(-50%,-50%);
