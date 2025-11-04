@@ -274,11 +274,11 @@ componentWillUnmount(){
         <a className={`email ${this.state.iscontact && 'showcontact'}`} href='mailto:megsoft007@gmail.com'>megsoft007@gmail.com</a>
       </div>
       <div className={`aboutcont ${this.state.isabout && 'showabout'}`}
-             > I'm Meg.
+             > I'm <i>Meg</i>.
               I do frontend and keep growing my skills. Besides that, I enjoy web design{'\u00A0'}—{'\u00A0'}
               I spend time exploring projects by other designers and developers 
               to learn and get inspired by their work. I also like creating 
-              logos and plan to share my designs on Behance.{'\u00A0'}
+              logos and plan to share my designs on <i style={{}}>Behance</i>.{'\u00A0'}
               <br />
               {window.innerWidth>550?<br/>:''}
               I'm open to opportunities to collaborate on your projects.
