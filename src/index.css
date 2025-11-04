@@ -378,9 +378,7 @@ transform: translateZ(0);
   .cont {
     background: unset;
   }
-  canvas {
-    position: fixed;
-  }
+
   .workcont {
     background: unset;
     padding: unset;

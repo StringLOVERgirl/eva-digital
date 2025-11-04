@@ -42,6 +42,7 @@ class Cont extends React.Component{
       this.innerWidth = window.innerWidth
       return
     }
+    alert()
     let width = window.innerWidth / this.scale;
     let height = window.innerHeight / this.scale;
     let size 
