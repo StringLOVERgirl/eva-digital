@@ -19,7 +19,8 @@ class Cont extends React.Component{
     this.animation = null;
     this.size = 2.3
     this.scale = 5,
-    this.prevwidth = window.innerWidth
+    this.prevwidth = window.innerWidth,
+    this.first = false
   }
 
   hide = () => {
@@ -38,11 +39,13 @@ class Cont extends React.Component{
   }
 
   setsize = () => {
-    if (Math.abs((window.innerWidth - this.prevwidth) < 50 ) ){
+    if (Math.abs((window.innerWidth - this.prevwidth) < 50 ) && this.first ){
       this.prevwidth = window.innerWidth
       alert()
       return
     }
+    if (!this.first){this.first = true}
+
     let width = window.innerWidth / this.scale;
     let height = window.innerHeight / this.scale;
     let size 
