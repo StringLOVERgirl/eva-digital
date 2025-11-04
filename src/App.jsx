@@ -280,7 +280,7 @@ componentWillUnmount(){
               to learn and get inspired by their work. I also like creating 
               logos and plan to share my designs on <i style={{}}>Behance</i>.{'\u00A0'}
               <br />
-              {window.innerWidth>550?<br/>:''}
+              {<br/>}
               I'm open to opportunities to collaborate on your projects.
              </div>
     </header>
