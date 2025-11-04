@@ -361,7 +361,7 @@ transform: translateZ(0);
 
 @media (max-width: 550px) {
   html {
-    background: radial-gradient(farthest-corner, rgba(227, 202, 202, 0.504), transparent) 50vw ;
+    background: radial-gradient(farthest-corner, rgba(227, 202, 202, 0.45), transparent) 50vw ;
 
   }
   .cont {
