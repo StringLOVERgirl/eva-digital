@@ -4,7 +4,6 @@ import threebg from './assets/actual-fullfilled.png'
 import * as THREE from 'three'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
-// import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 // Written as a class component specifically for a portfolio
 // написано классовым для портфолио 
 class Cont extends React.Component{
@@ -276,7 +275,7 @@ componentWillUnmount(){
       </div>
       <div className={`aboutcont ${this.state.isabout && 'showabout'}`}
              > I'm Meg.
-              I'm learning front-end development. Besides that, I enjoy web design{'\u00A0'}—{'\u00A0'}
+              I do frontend and keep growing my skills. Besides that, I enjoy web design{'\u00A0'}—{'\u00A0'}
               I spend time exploring projects by other designers and developers 
               to learn and get inspired by their work. I also like creating 
               logos and plan to share my designs on Behance.{'\u00A0'}
@@ -288,17 +287,7 @@ componentWillUnmount(){
     <div className="violet"></div>
     <div className={`workcont ${this.state.offset?'abouton':''}`}>
       <div className="work"></div>
-{/* 
-      <div className="colorscont">
-        <div className="color top">
-          <div className="percent">15%</div>
-          <div className="colorname redname">#fc202099</div>
-        </div>
-        <div className="color bottom">
-           <div className="percent">85%</div>
-           <div className="colorname violetname">#f1ebff</div>
-        </div>
-      </div> */}
+
 
     </div>
     <div className="titlecont">
@@ -355,7 +344,6 @@ function App() {
     <div className="App">
       {/* <div className="outouforder" style={{height:'100vh', width: '100vw', position: 'absolute', zIndex: 3}}>currently developing</div> */}
       <Cont></Cont>
-      {/* <div className="copy copymob">2025© Meg. All rights reserved.</div> */}
     </div>
   )
 }
