@@ -189,6 +189,8 @@ li:hover {
   transform: translate(-50%,-60%);
   pointer-events: all;
   display: flex;
+  align-items: center;
+  justify-content: center;
   /* #deb4b41a */
   /* #deb4b46d */
   background: 
@@ -196,8 +198,24 @@ li:hover {
      /* ,linear-gradient(#ffffff94,#ffffff94) */
      ;
   /* background: #ffffff94; */
+  /* background: unset; */
   border-radius: 30px;
   padding: 1em;
+}
+.workcont::after{
+  /* content: ''; */
+  display: block;
+position: absolute;
+/* left: 0; */
+/* top: 0; */
+width: 120%;
+height: 120%;
+border-radius: 30px;
+
+/* transform: translateX(); */
+background: 
+linear-gradient(#deb4b41a,#deb4b456);
+backdrop-filter: blur(3px);
 }
 
 .work {
@@ -269,7 +287,8 @@ li:hover {
 }
 
 .mockupcont {
-  height: 20vh;
+  height: 7.5em;
+  height: clamp(0em,7.5em,12vw);
   position: absolute;
   width: 30vw;
   z-index: 1;
@@ -438,4 +457,35 @@ opacity: 0;
 
   height: 40vh;
 }
+}
+
+@media screen and (orientation: landscape) {
+ .name {
+  font-size: 2em;
+ }
+  ul {
+  font-size: 0.85em;
+}
+.aboutcont {
+  font-size: 1em;
+}
+.workcont {
+  padding: 0.5em;
+}
+  .work {
+    aspect-ratio: 1/1.05;
+    width: 150px;
+  }  
+  .description {
+    font-size: 0.8em;
+  }
+  .title {
+    font-size: 1.3em;
+  }
+  .mockuptext {
+    font-size: 1em;
+  }
+  .copy {
+    font-size: 0.5em;
+  }
 }
