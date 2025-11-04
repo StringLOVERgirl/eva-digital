@@ -360,6 +360,10 @@ transform: translateZ(0);
 }
 
 @media (max-width: 550px) {
+  html {
+    background: radial-gradient(farthest-corner, rgba(227, 202, 202, 0.504), transparent) 50vw ;
+
+  }
   .cont {
     background: unset;
   }
@@ -459,7 +463,7 @@ opacity: 0;
 }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and(max-height: 500px) and (orientation: landscape) {
  .name {
   font-size: 2em;
  }
