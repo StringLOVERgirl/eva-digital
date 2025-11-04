@@ -38,10 +38,9 @@ class Cont extends React.Component{
   }
 
   setsize = () => {
-    if (Math.abs((window.innerWidth - this.prevwidth) < 50 ) && (window.innerWidth - this.prevwidth) != 0 ){
+    if (Math.abs((window.innerWidth - this.prevwidth) < 50 ) ){
       this.prevwidth = window.innerWidth
       alert()
-
       return
     }
     let width = window.innerWidth / this.scale;
