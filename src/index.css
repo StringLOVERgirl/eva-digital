@@ -191,6 +191,10 @@ li:hover {
   transform: translate(-50%,-60%);
   pointer-events: all;
   display: flex;
+
+  background: #ffffff94;
+  border-radius: 30px;
+  padding: 1em;
 }
 
 .work {
@@ -374,7 +378,12 @@ transform: translateZ(0);
   .cont {
     background: unset;
   }
+  canvas {
+    position: fixed;
+  }
   .workcont {
+    background: unset;
+    padding: unset;
     transition: top 0.8s var(--cubic);
     transform: translate(-50%,-50%);
   }
