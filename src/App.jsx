@@ -284,7 +284,13 @@ componentWillUnmount(){
               I'm open to opportunities to collaborate on your projects.
              </div>
     </header>
-    <div className="violet"></div>
+    {/* <div className="leftdecor">*</div> */}
+    {/* <div className="violet"></div> */}
+    <div className="textcont">
+      <div className="tx design">design</div>
+      <div className="and">&</div>
+      <div className="tx frontend">frontend</div>
+    </div>
     <div className={`workcont ${this.state.offset?'abouton':''}`}>
       <div className="work"></div>
 

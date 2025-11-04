@@ -8,6 +8,57 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.textcont{
+  /* opacity: 0; */
+  /* color: var(--textColor); */
+  font-size: 2em;
+  width: 8em;
+  font-family: helvetica neue;
+  position: absolute;
+  left: 0;
+  /* gap: 1em; */
+  top: 60vh;
+  transform: translate(10%,0%) rotate(-90deg);
+  display: flex;
+  transform-origin: left;
+  flex-direction: column;
+  /* border: solid 1px; */
+  padding-inline: 0.25em;
+}
+.and {
+  color: rgb(75, 72, 72) !important;
+  margin-inline: auto;
+  font-size: 0.5em;
+  bottom: 0.25em;
+  position: absolute;
+  left: 1em;
+  line-height: 0.5;
+  /* margin-block: 1em; */
+}
+
+.frontend {
+  /* margin-left: auto; */
+  text-indent: 3em;
+  color: rgb(182, 176, 176) !important;
+}
+.tx {
+  color: var(--textColor);
+  line-height: 0.8;
+  /* position: absolute; */
+  left: 0;
+}
+.workcont::before{
+  /* content: ''; */
+  background: red;
+  display: block;
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  transform: translateX(-100%);
+  background: url('./assets/actual-fullfilled.png') 0 0 / 80% ;
+  filter: blur(3px);
+}
 
 * {
   margin: 0;
@@ -279,12 +330,6 @@ backdrop-filter: blur(3px);
   background: url(./assets/noun-arrow-black.svg) center / contain no-repeat;
 }
 
-.violet {
-  height: 100vh;
-  position: absolute;
-  width: 22vw;
-  /* background: #f1ebff; */
-}
 
 .mockupcont {
   height: 7.5em;
@@ -342,6 +387,7 @@ transform: translateZ(0);
   width: 100%;
   position: absolute;
   z-index: 1;
+  display: none;
   /* background: red; */
 }
 
@@ -349,10 +395,11 @@ transform: translateZ(0);
   position: absolute;
   /* z-index: -1; */
   bottom: 2em;
+  
   right: 1em;
   font-size: 0.75em;
   font-family: helvetica neue ;
-  color: var(--textColor);
+  color: rgba(0, 0, 0, 0.682);
   /* color: white; */
 }
 .copymob{
@@ -442,17 +489,23 @@ opacity: 0;
     /* bo */
     margin-inline: auto;
   }
+  .textcont{
+  opacity: 0;}
 }
 
 @media (min-width: 1350px) {
   .title:after {
     height: 2.5vh;
 }
+.titlecont {
+  padding: 3em;
+}
 .mockupcont {
   height: 15vh;
+  padding-bottom: 3em;
 }
 .work {
-  min-width: 280px;
+  min-width: 300px;
 }
 .colorscont {
   width: 8.5em;
@@ -460,6 +513,9 @@ opacity: 0;
 .mockupcont:hover {
 
   height: 40vh;
+}
+.copy {
+  bottom: 4em;
 }
 }
 
@@ -491,5 +547,23 @@ opacity: 0;
   }
   .copy {
     font-size: 0.5em;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 2000px){
+  body {
+    display: flex;
+  justify-content:  center;
+  }
+  .cont {
+    width: 60vw;
+    position: relative;
+  }
+  .mockupcont {
+    width: 15vw;
+    height: 13vh;
+  }
+  .aboutcont {
+    width: 15vw;
   }
 }
