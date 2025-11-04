@@ -39,7 +39,7 @@ class Cont extends React.Component{
 
   setsize = () => {
     if (Math.abs((window.innerWidth - this.prevwidth) < 50 ) && (window.innerWidth - this.prevwidth) != 0 ){
-      this.innerWidth = window.innerWidth
+      this.prevwidth = window.innerWidth
       return
     }
     alert()
@@ -278,7 +278,7 @@ componentWillUnmount(){
               to learn and get inspired by their work. I also like creating 
               logos and plan to share my designs on Behance.{'\u00A0'}
               <br />
-              {window.innerWidth>550?<br/>:0}
+              {window.innerWidth>550?<br/>:''}
               I'm open to opportunities to collaborate on your projects.
              </div>
     </header>
