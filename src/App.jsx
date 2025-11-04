@@ -41,7 +41,7 @@ class Cont extends React.Component{
   setsize = () => {
     if (Math.abs((window.innerWidth - this.prevwidth) < 50 ) && this.first ){
       this.prevwidth = window.innerWidth
-      alert()
+      // alert()
       return
     }
     if (!this.first){this.first = true}
