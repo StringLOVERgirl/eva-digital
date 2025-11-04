@@ -411,6 +411,7 @@ transform: translateZ(0);
     background: radial-gradient(farthest-corner, rgba(227, 202, 202, 0.45), transparent) 50vw ;
 
   }
+
   .cont {
     background: unset;
   }
@@ -523,6 +524,9 @@ opacity: 0;
  .name {
   font-size: 2em;
  }
+ .textcont {
+  font-size: 1em;
+}
   ul {
   font-size: 0.85em;
 }
@@ -566,4 +570,5 @@ opacity: 0;
   .aboutcont {
     width: 15vw;
   }
+
 }
