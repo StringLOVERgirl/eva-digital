@@ -333,7 +333,7 @@ backdrop-filter: blur(3px);
 
 .mockupcont {
   height: 7.5em;
-  height: clamp(0em,7.5em,12vw);
+  height: clamp(0em,7em,12vw);
   position: absolute;
   width: 30vw;
   z-index: 1;
@@ -520,10 +520,13 @@ opacity: 0;
 }
 }
 
-@media screen and(max-height: 500px) and (orientation: landscape) {
+@media screen and (max-height: 500px) and (orientation: landscape) {
  .name {
   font-size: 2em;
- }
+ }.mockupcont {
+  height: 5em;
+}
+
  .textcont {
   font-size: 1em;
 }
